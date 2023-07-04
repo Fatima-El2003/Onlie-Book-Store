@@ -1,0 +1,303 @@
+:root{
+    --purple:#AD87F3;
+    --light-purple:#E9E3FE;
+    --dark-purple:#8886F4;
+    --yellow:#FBD969;
+    --black:#2c2c2c;
+    --white:#fff;
+    --light-color:#666;
+    --light-white:#ccc;
+    --light-bg:#f5f5f5;
+    --border:1rem solid (--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+*::selection{
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+*::-webkit-scrollbar{
+    height: 5px;
+    width: 8px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--dark-purple);
+}
+html{
+    font-size:62.5% ;
+    overflow-x: hidden;
+}
+section{
+    padding:2rem 1rem ;
+}
+@keyframes fadeIn {
+    0%{
+        transform: translateYxs(10px);
+        opacity: .2s;
+    }
+}
+.delete-btn{
+    background-color: var(--yellow);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: var(--white);
+}
+.delete-btn:hover{
+    color: var(--purple);
+    background-color: var(--light-white);
+}
+.white-btn{
+    background-color: var(--dark-purple);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    
+}
+.white-btn:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+.message{
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--light-bg);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap: 1rem;
+}
+.message span{
+    font-size:14px;
+    color: var(--black);
+}
+.message i{
+    cursor: pointer;
+    color: var(--yellow);
+    font-size: 18px;
+}
+.message i:hover{
+    transform: rotate(90dg);
+}
+
+.header{
+    position: sticky;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 1.8rem;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header .flex .logo{
+    font-size: 20px;
+    color: var(--black);
+}
+.header .flex .logo span{
+    color: var(--dark-purple);
+}
+.header .flex .navbar a{
+    margin: 0 10px;
+    font-size: 17px;
+    color: var(--black);
+}
+.header .flex .navbar a:hover{
+    color: var(--purple);
+}
+.icons > *{
+    font-size: 18px;
+    color: var(--black);
+    cursor: pointer;
+    margin-left: 10px;
+}
+.icons > *:hover{
+    color: var(--purple);
+}
+.header .flex .account-box{
+    position: absolute;
+    top:120%; right:18px;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    padding:18px;
+    text-align: center;
+    width: 30rem;
+    display: none;
+    animation: fadeIn .2s linear;
+ }
+.header .flex .account-box.active{
+    display: inline-block;
+}
+ .header .account-box p{
+    font-size: 15px;
+    color: var(--light-color);
+    margin-bottom: 12px;
+}
+.header .flex .account-box p span{
+    color: var(--dark-purple);
+}
+.delete-btn{
+    background-color: var(--yellow);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: var(--white);
+}
+.delete-btn:hover{
+    color: var(--purple);
+    background-color: var(--light-white);
+}
+.header .header-2 .flex .logout{
+    margin-top: 10px;
+}
+#menu-btn{
+    display: none;
+}
+.add-products form{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 3rem;
+}
+.add-products form h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.add-products form .box{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    color: var(--black);
+    font-size: 1.4rem;
+}
+.add-products form .last{
+    margin-bottom: 20px;
+}
+.show-products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+    justify-content: center;
+    gap: 15rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+.show-products .box-container .box{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+}
+.show-products .box-container .box .name{
+    padding: 8px 0;
+    font-size: 15px;
+    color: var(--black);
+}
+.show-products .box-container .box .price{
+    padding: 8px 0;
+    font-size: 18px;
+    color: var(--black);
+}
+.empty{
+    padding: 1rem;
+    text-align: center;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid var(--light-white);
+        transition: .2s linear;
+        background-color: var(--white);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }  
+    .header .flex .navbar a{
+        display: block;
+        margin: 18px;
+        font-size: 18px;
+    }
+}   
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
